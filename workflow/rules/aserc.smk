@@ -1,10 +1,10 @@
 rule add_rg:
     input:
-        "data/{sample}.bam",
+        "data/{sample}.Aligned.sortedByCoord.out.bam",
     output:
         "results/add-rg/{sample}.bam",
     log:
-        "logs/picard/replace_rg/{sample}.log",
+        "logs/add_rg/{sample}.log",
     params:
         extra="--RGLB lib1 --RGPL ILLUMINA --RGPU {sample} --RGSM {sample}",
     resources:
@@ -20,7 +20,7 @@ rule run_aserc:
     output:
         out = "results/aserc/{sample}_aserc.csv",
     conda:
-        "workflow/envs/gatk_aserc.yaml",
+        "../envs/gatk_aserc.yaml",
     log:
         "logs/aserc/{sample}.txt",
     resources:

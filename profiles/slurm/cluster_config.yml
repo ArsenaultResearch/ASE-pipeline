@@ -1,0 +1,6 @@
+__default__:
+    partition: serial-requeue
+    time: 01-00:00
+    nodes: 1
+    mem: 8000
+    output: "logs/slurm/slurm-%j.out"
