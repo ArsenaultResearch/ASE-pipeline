@@ -2,5 +2,5 @@
 # Variables you need to change
 ##############################
 
-vcf: "" # path to the vcf of variants you want counts from
-gen: "" # path to the genome fasta file you want
+snp_vcf: "" # path to the vcf of variants you want counts from
+genome: "" # path to the genome fasta file you want
